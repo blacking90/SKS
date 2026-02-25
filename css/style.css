@@ -192,7 +192,7 @@
 
 .carousel-control-prev:hover {
     background: var(--bs-secondary);
-    transition: .8s;
+    transition: .5s;
 }
 
 .carousel-control-next {
@@ -258,6 +258,37 @@
     background: var(--bs-secondary);
     opacity: 1;
 }
+
+#carouselId .carousel-indicators li {
+    width: 30px;
+    height: 10px;
+    background: var(--bs-primary);
+    margin: 10px;
+    border-radius: 30px;
+    opacity: 1;
+}
+
+#carouselId .carousel-indicators li:hover {
+    background: var(--bs-secondary);
+    opacity: 1;
+}
+
+#carouselId .carousel-indicators li {
+    width: 30px;
+    height: 10px;
+    background: var(--bs-primary);
+    margin: 10px;
+    border-radius: 30px;
+    opacity: 1;
+}
+
+#carouselId .carousel-indicators li:hover {
+    background: var(--bs-secondary);
+    opacity: 1;
+}
+
+
+
 
 @media (max-width: 992px) {
     .carousel-item {
