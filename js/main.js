@@ -33,6 +33,7 @@
     // Team carousel
     $(".team-carousel").owlCarousel({
         autoplay: false,
+        items: 2,
         smartSpeed: 1000,
         center: false,
         dots: false,
