@@ -1,0 +1,35 @@
+.contact-detail {
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.contact-form button {
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+}
+
+.contact-map iframe {
+    border-radius: 10px;
+}
