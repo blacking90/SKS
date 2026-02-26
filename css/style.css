@@ -566,11 +566,6 @@
     display: flex;
 }
 
-.team-carousel {
-  margin: 0 auto;   /* centers the carousel container */
-  max-width: 900px; /* optional: restrict width */
-}
-
 
 .team-carousel .owl-nav .owl-prev,
 .team-carousel .owl-nav .owl-next {
