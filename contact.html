@@ -226,10 +226,10 @@
                                     <input type="email" name="email" class="form-control border-0 py-3" placeholder="Your Email" required>
                                 </div>
                                 <div class="mb-4">
-                                    <input type="text" name="project" class="form-control border-0 py-3" placeholder="Project" required>
+                                    <input type="text" name="subject" class="form-control border-0 py-3" placeholder="Your Query About" required>
                                 </div>
                                 <div class="mb-4">
-                                    <textarea name="message" class="w-100 form-control border-0 py-3" rows="6" placeholder="Message" required></textarea>
+                                    <textarea name="message" class="w-100 form-control border-0 py-3" rows="6" placeholder="Your Message" required></textarea>
                                 </div>
                                 <div class="text-start">
                                     <button class="btn bg-primary text-white py-3 px-5" type="submit">
@@ -342,8 +342,8 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
     emailjs.sendForm(
-        "service_j6piexd",     // Replace
-        "template_uhek7qc",    // Replace
+        "service_5lz07wk",     // Replace
+        "template_ye7a1ac",    // Replace
         this
     ).then(function() {
 
