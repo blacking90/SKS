@@ -877,38 +877,55 @@
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
 
- <!-- EmailJS Library -->
+  <!-- EmailJS Library -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 <script>
-(function(){
-    emailjs.init("R4VRF-2OmJzPkfRgk"); // Replace with your Public Key
-})();
+document.addEventListener("DOMContentLoaded", function () {
 
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+    emailjs.init("R4VRF-2OmJzPkfRgk");
 
-    emailjs.sendForm(
-        "service_5lz07wk",     // Replace
-        "template_ye7a1ac",    // Replace
-        this
-    ).then(function() {
+    document.getElementById("contactForm")
+        .addEventListener("submit", function (e) {
 
-        document.getElementById("formResponse").innerHTML =
-            "<div style='color:green;'>Message sent successfully!</div>";
-        document.getElementById("contactForm").reset();
+        e.preventDefault();
 
-    }, function(error) {
+        let form = this;
 
-        document.getElementById("formResponse").innerHTML =
-            "<div style='color:red;'>Failed to send message.</div>";
+        // 1️⃣ Send Admin Email
+        emailjs.sendForm(
+            "service_5lz07wk",
+            "template_ye7a1ac",
+            form
+        )
+        .then(function () {
+
+            // 2️⃣ Send Auto Reply
+            emailjs.sendForm(
+                "service_5lz07wk",
+                "template_203w8ps",
+                form
+            );
+
+            document.getElementById("formResponse").innerHTML =
+                "<div style='color:green;'>Message sent successfully!</div>";
+
+            form.reset();
+
+        })
+        .catch(function (error) {
+            console.log("FAILED...", error);
+            document.getElementById("formResponse").innerHTML =
+                "<div style='color:red;'>Failed to send message.</div>";
+        });
 
     });
+
 });
 
+</script> 
 
-
-</script> <!-- Email jslibrabry end-->
+<!-- Email jslibrabry end-->
 
 
 
