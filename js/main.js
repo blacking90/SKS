@@ -35,7 +35,7 @@
         autoplay: false,
         items: 3,
         smartSpeed: 1000,
-        center: true,
+        center: false,
         dots: false,
         loop: false,
         margin: 50,
