@@ -35,11 +35,11 @@
         autoplay: false,
         items: 3,
         smartSpeed: 1000,
-        center: false,
+        center: true,
         dots: false,
         loop: false,
         margin: 50,
-        nav : false,
+        nav : true,
         navText : [
             '<i class="bi bi-arrow-left"></i>',
             '<i class="bi bi-arrow-right"></i>'
