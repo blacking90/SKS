@@ -104,6 +104,49 @@
     });
 
 
+// Contact 
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Stop page reload
+
+    const btn = document.getElementById('submitBtn');
+    const responseMsg = document.getElementById('responseMessage');
+    
+    // Feedback for the user
+    btn.innerText = "Sending...";
+    btn.disabled = true;
+
+    // Collect Form Data
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+
+    // Replace 'process.php' with your actual backend endpoint
+    fetch('process.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => {
+        if (response.ok) {
+            responseMsg.innerHTML = "<p class='success'>Message sent successfully!</p>";
+            this.reset(); // Clear form
+        } else {
+            throw new Error('Server error');
+        }
+    })
+    .catch(error => {
+        responseMsg.innerHTML = "<p class='error'>Oops! Something went wrong.</p>";
+    })
+    .finally(() => {
+        btn.innerText = "Send Message";
+        btn.disabled = false;
+    });
+});
+
+//conatact end
+
+
 
 })(jQuery);
 
